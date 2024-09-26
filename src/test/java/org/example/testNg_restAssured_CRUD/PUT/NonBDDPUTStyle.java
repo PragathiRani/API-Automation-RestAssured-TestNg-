@@ -1,4 +1,4 @@
-package org.example.restAssured_CRUD.PUT;
+package org.example.testNg_restAssured_CRUD.PUT;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -7,7 +7,7 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
-public class NonBDDStylePUT {
+public class NonBDDPUTStyle {
 
     RequestSpecification requestSpecification;
     ValidatableResponse validatableResponse;
@@ -15,8 +15,8 @@ public class NonBDDStylePUT {
     // 6118
     // Token -  Token?
     // Payload - {
-    //    "firstname" : "Pragathi",
-    //    "lastname" : "Rani",
+    //    "firstname" : "Pramod",
+    //    "lastname" : "Brown",
     //    "totalprice" : 111,
     //    "depositpaid" : true,
     //    "bookingdates" : {
@@ -26,23 +26,45 @@ public class NonBDDStylePUT {
     //    "additionalneeds" : "Breakfast"
     //}
 
+
+    // POST - Auth - token
+    // POST - Booking ID
+    // PUT - token and BookingID
+
+
+//    public void get_token(){
+//
+//    }
+//
+//    public void get_booking_id(){
+//        return bookingid;
+//    }
+
+//    public void get_token(){
+//
+//    }
+//
+//    public void get_bookingid(){
+//        return get_bookingid();
+//    }
+
     @Test
     public void test_put_positive_tc(){
         // POST - Auth - token
 
-        String token  = "0d5c10c0a1064ce";   //Manually providing the Token and Booking ID
-        String bookingid = "3159";
+        String token  = "4ae67e3817321bd";
+        String bookingid = "2529";
 
         String payloadPUT= "{\n" +
-                "    \"firstname\" : \"Pragathi\",\n" +
-                "    \"lastname\" : \"Rani\",\n" +
-                "    \"totalprice\" : 111,\n" +
-                "    \"depositpaid\" : false,\n" +
+                "    \"firstname\" : \"Praveen\",\n" +
+                "    \"lastname\" : \"Iyli\",\n" +
+                "    \"totalprice\" : 9972,\n" +
+                "    \"depositpaid\" : true,\n" +
                 "    \"bookingdates\" : {\n" +
-                "        \"checkin\" : \"2024-01-01\",\n" +
-                "        \"checkout\" : \"2024-01-01\"\n" +
+                "        \"checkin\" : \"2024-09-20\",\n" +
+                "        \"checkout\" : \"2024-09-20\"\n" +
                 "    },\n" +
-                "    \"additionalneeds\" : \"Lunch, Breakfast\"\n" +
+                "    \"additionalneeds\" : \"Lunch\"\n" +
                 "}";
 
 
@@ -59,5 +81,6 @@ public class NonBDDStylePUT {
         // Get Validatable response to perform validation
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
+
     }
 }

@@ -3,8 +3,11 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
           name="C:/Users/Dell/IdeaProjects/API_Automation_ATB7x/src/test/java/org/example/testNG_CRUD/test002.java">
+
+        <parameter name="browser" value="firefox"></parameter>
+
         <classes>
-            <class name="org.example.testNg_integration_CRUD.TestCaseIntegration">
+            <class name="org.example.testNg_annotations_attributes.TestParametersEx">
 
             </class>
         </classes>

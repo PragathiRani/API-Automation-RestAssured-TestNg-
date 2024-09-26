@@ -3,9 +3,15 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
           name="C:/Users/Dell/IdeaProjects/API_Automation_ATB7x/src/test/java/org/example/testNG_CRUD/test002.java">
+        <groups>
+            <run>
+                <include name="dev"></include>
+            </run>
+        </groups>
         <classes>
-            <class name="org.example.testNg_integration_CRUD.TestCaseIntegration">
-
+            <class name="org.example.testNg_annotations_attributes.TestGroupEx">
+                <methods>
+                </methods>
             </class>
         </classes>
     </test>
